@@ -48,7 +48,7 @@ def GetSuccessContent()
 {
   wrap([$class: 'BuildUser']) {
     def Content = ""
-	  Content = "项目名称：**${env.JOB_NAME}**\\n当前版本：**${env.BUILD_NUMBER}**\\n构建发起：**${env.BUILD_USER}**\\n持续时间：**${currentBuild.durationString}**\\n构建日志：**[点击查看详情](${env.BUILD_URL}console)**\\n构建结果：**构建成功 ✅**"
+	  Content = "项目名称：**${env.JOB_NAME}**\\n当前版本：**${env.BUILD_NUMBER}**\\n构建发起：**${env.GIT_COMMITTER_NAME}**\\n持续时间：**${currentBuild.durationString}**\\n构建日志：**[点击查看详情](${env.BUILD_URL}console)**\\n构建结果：**构建成功 ✅**"
     return Content
 	} 
 }
